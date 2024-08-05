@@ -1,0 +1,22 @@
+import tkinter as tk
+
+def greet():
+    name = name_entry.get()
+    greeting_label.config(text=f"Привет, {name}!")
+
+root = tk.Tk()
+root.title("Приветствие")
+
+label = tk.Label(root, text="Введите ваше имя, пожалуйста")
+label.pack()
+
+name_entry = tk.Entry(root)
+name_entry.pack()
+
+button = tk.Button(root, text="Приветствие", command=greet)
+button.pack()
+
+greeting_label = tk.Label(root, text="")
+greeting_label.pack()
+
+root.mainloop()
